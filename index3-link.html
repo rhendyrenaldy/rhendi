@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rhendi Renaldi - Contact</title>
+    <link rel="stylesheet" href="css/main3-link.css">
+</head>
+<body>
+    
+    <div class="nav-container">
+        <header>
+            <a href="index.html" class="logo">Rhendi</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="index2.html">Works</a></li>
+                    <li><a href="index3-link.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+   
+    <div class="hero-container">
+        <div class="content">
+            <h1 class="stagger1">Contact</h1>
+            <a href="index.html" class="aboutme-btn stagger1">About Me</a>
+        </div>
+        <div class="hero-design">
+            <img src="images/hero.png" alt="hero"></a>
+        </div>
+    </div>
+    
+    <section class="contact-container">
+        <form name="rhendi-contact-form">
+            <div class="contact-box transition2">
+                <div class="left transition2">
+                    <div class="email">
+                        <h3>Email</h3>
+                        <p>rhendysikoembang@gmail.com</p>
+                    </div>
+                    <div class="addres">
+                        <h3>Addres</h3>
+                        <p>Unnes, Semarang, Indonesia</p>
+                    </div>
+                    <div class="addres">
+                        <h3>Phone</h3>
+                        <p>+6281362664115</p>
+                    </div>
+                </div>
+                <div class="right transition2">
+                    <h2>Contact Me</h2>
+                    <input type="text" class="field" placeholder="Your Name" name="nama">
+                    <input type="email" class="field" placeholder="Your Email" name="email">
+                    <textarea class="field" placeholder="Message" name="pesan"></textarea>
+                    <button type="submit" class="btn">Send</button>
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <div class="social-media">
+        <footer>
+            <div class="social-footer">
+                <ul>
+                    <li><a href="https://www.instagram.com/rhendyrenaldy/"target="_blank"><img src="images/instagram.png" alt="instagram"></a></li>
+                    <li><a href="https://dribbble.com/Rhendy"target="_blank"><img src="images/dribbble.png" alt="dribbble"></a></li>
+                    <li><a href="https://www.behance.net/rhendy"target="_blank"><img src="images/behance.png" alt="behance"></a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js" integrity="sha512-2fk3Q4NXPYAqIha0glLZ2nluueK43aNoxvijPf53+DgL7UW9mkN+uXc1aEmnZdkkZVvtJZltpRt+JqTWc3TS3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js" integrity="sha512-jNJOCd1PIjJoUa1XTDKaPdBLNUe4OJTrltKG+70O5ghYZ943nTRGIzjObwC2JtSm1fG7T06GbUApR2eirIU/jA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script>
+        gsap.registerPlugin(ScrollTrigger)
+        var tl = gsap.timeline();
+
+        tl.from('.hero-container', {
+            y: '-30',
+            opacity: 0,
+            duration: 2,
+            ease: Power4.easeOut
+        })
+        tl.from('.stagger1', {
+            opacity: 0,
+            y: -50,
+            stagger: .3,
+            ease: Power4.easeOut,
+            duration: 2
+        }, "-=2.2")
+        tl.from('.hero-design',{
+            opacity: 0, 
+            y:50, 
+            ease: Power4.easeOut, 
+            duration: 1
+        }, "-=2")
+        tl.from('.transition2', {
+            ScrollTrigger: {
+                trigger: '.transition2',
+                start: "top bottom"
+            },
+            y: 50,
+            opacity: 0,
+            duration: 1.2,
+            stagger: .3
+        })
+    </script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyMFep8xo0E8aI9p7__xl4TnPvs9al3KeJIlJLpGkuP2Pg2hv7TEQt28Xb6LuO-oxdxVQ/exec'
+    const form = document.forms['rhendi-contact-form']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>

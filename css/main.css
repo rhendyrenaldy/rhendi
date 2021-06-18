@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+body {
+  height: 100vh;
+  margin: 0;
+  font-family: 'Poppins', arial;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+.nav-container {
+  background: #ffffff;
+}
+
+.nav-container a {
+  color: #7C8E9E;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2em;
+}
+
+header .logo {
+  color: #5A6471;
+  font-weight: bold;
+}
+
+header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header ul a {
+  display: block;
+  padding: 0 1em;
+}
+
+.hero-design {
+  display: none;
+}
+
+.hero-container {
+  background: #00CEC8;
+  color: white;
+  display: -ms-grid;
+  display: grid;
+  text-align: center;
+  padding: 4em;
+}
+
+.hero-container .job {
+  color: #13848D;
+}
+
+.hero-container .seemyworks-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  background: #DC517C;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1em;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  -webkit-transition-property: -webkit-box-shadow;
+  transition-property: -webkit-box-shadow;
+  transition-property: box-shadow;
+  transition-property: box-shadow, -webkit-box-shadow;
+  -webkit-transition-property: box-shadow;
+}
+
+.hero-container .seemyworks-btn:hover, .hero-container .seemyworks-btn:active, .hero-container .seemyworks-btn:focus {
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.hero-container a {
+  color: white;
+}
+
+.about-container {
+  background: #E1F8F7;
+  padding: 4em 2em;
+  text-align: center;
+}
+
+.about-container .top {
+  position: relative;
+}
+
+.about-container .subtitle {
+  color: #5A6471;
+  font-weight: bold;
+}
+
+.about-container .profile {
+  display: -ms-grid;
+  display: grid;
+  padding: 2em;
+  height: 200px;
+  width: 200px;
+  place-content: center;
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.about-container .about-desc {
+  color: #7C8E9E;
+  margin-bottom: 3em;
+  font-size: .9em;
+  line-height: 1.8em;
+}
+
+.needhelp-container {
+  background: #00CEC8;
+  padding: 4em 2em;
+  text-align: center;
+  color: white;
+}
+
+.needhelp-container .needhelp {
+  margin-bottom: 2em;
+}
+
+.needhelp-container .messageme-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  background: #DC517C;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1em;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.needhelp-container .messageme-btn:hover, .needhelp-container .messageme-btn:active, .needhelp-container .messageme-btn:focus {
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.needhelp-container a {
+  color: white;
+}
+
+.social-footer {
+  display: block;
+}
+
+.social-footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 8em;
+  padding: 3em;
+  margin: auto;
+}
+
+.social-footer img {
+  width: 20px;
+}
+
+@media only screen and (min-width: 800px) {
+  .about-desc {
+    width: 500px;
+    margin: auto;
+  }
+  .bottom {
+    max-width: 600px;
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  .hero-container {
+    height: 90vh;
+  }
+  header {
+    padding: 2em 2em 2em 4em;
+  }
+  .content {
+    padding: 6em 8em 6em 4em;
+    text-align: left;
+  }
+  .content h1 {
+    font-size: 3em;
+  }
+  .content .job {
+    margin-top: -2em;
+  }
+  .content .seemyworks-btn {
+    margin: unset;
+  }
+  .hero-design {
+    display: unset;
+    width: 25%;
+    margin-left: 70%;
+    margin-top: -25%;
+  }
+  .about-desc {
+    width: 500px;
+    margin: auto;
+  }
+  .bottom {
+    max-width: 800px;
+  }
+}
+/*# sourceMappingURL=main.css.map */

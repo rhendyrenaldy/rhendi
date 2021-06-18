@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+body {
+    height: 100vh;
+    margin: 0;
+    font-family: 'Poppins', arial;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+img {width: 100%;}
+
+.nav-container {
+    background: #ffffff;
+    a {
+        color: #7C8E9E;
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+
+    .logo {
+        color: #5A6471;
+        font-weight: bold;
+    }
+
+    ul {
+        display: flex;
+
+        a {
+            display: block;
+            padding: 0 1em;
+        }
+    }
+   
+}
+
+.hero-design {
+    display: none;
+}
+
+.hero-container {
+    background: #00CEC8;
+    color: white;
+    display: grid;
+    text-align: center;
+    padding: 4em;
+
+    .messme-btn {
+        display: flex;
+        margin: auto;
+        background: #DC517C;
+        width: fit-content;
+        padding: 1em;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+        transition-duration: 0.3s;
+        -webkit-transition-duration: 0.3s;
+        transition-property: box-shadow;
+        -webkit-transition-property: box-shadow;
+    }
+    
+    .messme-btn:hover, .messme-btn:active, .messme-btn:focus{
+        box-shadow: 0 0 20px rgba(0, 0, 0, .3);
+    }
+
+    a {
+        color: white;
+    }
+
+}
+
+section{
+    padding: 4em 2em;
+    text-align: center;
+}
+
+.myport {
+    background: #E1F8F7;
+
+    .port-container ul li {
+        background: white;
+        border-radius: 1em;
+        margin-bottom: 2em;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 1fr);
+        color: #5A6471;
+        box-shadow: 0 0 25px rgba(0, 0, 0, .04);
+
+
+        .port-title {
+            font-weight: bold;
+            font-size: 2em;
+            margin-top: 0;
+        }
+        .port-desc {
+            margin-top: -1em;
+        }
+
+        .viewwork-btn {
+            display: flex;
+            margin: auto;
+            background: #1BBBF9;
+            width: fit-content;
+            padding: 1em;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+            transition-duration: 0.3s;
+            -webkit-transition-duration: 0.3s;
+            transition-property: box-shadow;
+            -webkit-transition-property: box-shadow;
+        }
+        
+        .viewwork-btn:hover, .viewwork-btn:active, .viewwork-btn:focus{
+            box-shadow: 0 0 20px rgba(0, 0, 0, .3);
+        }
+    
+        a {
+            color: white;
+        }
+        
+        .port-image {
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+
+            img {
+                height: auto;
+                border-radius: 1em 1em 0 0;
+            }
+        }
+        .text {
+            padding: 2em;
+        }
+
+    }
+}
+
+
+.needhelp-container {
+    background: #00CEC8;
+    padding: 4em 2em;
+    text-align: center;
+    color: white;
+
+    .needhelp {
+        margin-bottom: 2em;
+    }
+
+    .messageme-btn {
+        display: flex;
+        margin: auto;
+        background: #DC517C;
+        width: fit-content;
+        padding: 1em;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+        transition-duration: 0.3s;
+    }
+
+    .messageme-btn:hover, .messageme-btn:active, .messageme-btn:focus{
+        box-shadow: 0 0 20px rgba(0, 0, 0, .3);
+
+    }
+
+    a {
+        color: white;
+    }
+
+
+}
+
+.social-footer {
+    display: block;
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 8em;
+        padding: 3em;
+        margin: auto;
+      
+    }
+    img {width: 20px;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .port-container ul {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-gap: 3em;
+    }
+}
+
+@media only screen and (min-width: 1050px) {
+    .port-container ul {
+        display: grid;
+        grid-template-columns: repeat(3, 3fr);
+        grid-gap: 3em;
+    }
+    .hero-container {
+        height: 90vh;
+    }
+
+    section {
+        padding: 8em;
+    }
+
+    header {
+        padding: 2em 2em 2em 4em;
+    }
+    .content {
+        padding: 6em 8em 6em 4em;
+        text-align: left;
+        h1 {
+            font-size: 3em;
+        }
+        .messme-btn {
+            margin: unset;
+        }
+    }
+    .hero-design {
+        display: unset;
+        width: 25%;
+        margin-left: 70%;
+        margin-top: -25%;
+    }
+}
