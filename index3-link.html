@@ -34,7 +34,7 @@
     </div>
     
     <section class="contact-container">
-        <form name="rhendi-contact-form">
+        <form name="rhendi-contact-form" id="rhen-contact-form">
             <div class="contact-box transition2">
                 <div class="left transition2">
                     <div class="email">
@@ -115,12 +115,12 @@
     const scriptURL = 'https://script.google.com/macros/s/AKfycbyMFep8xo0E8aI9p7__xl4TnPvs9al3KeJIlJLpGkuP2Pg2hv7TEQt28Xb6LuO-oxdxVQ/exec'
     const form = document.forms['rhendi-contact-form']
   
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => console.log('Success!', response))
-        .catch(error => console.error('Error!', error.message))
-    })
+    form.addEventListener('submit', e => {  
+        e.preventDefault()  
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})  
+            .then(response => document.getElementById('rhen-contact-form').reset())  
+            .catch(error => console.error('Error!', error.message))  
+        }) 
   </script>
 </body>
 </html>
